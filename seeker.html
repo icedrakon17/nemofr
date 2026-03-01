@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nemo Around the World</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- MediaPipe Hands Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container fade-in">
+        <h1>Find Nemo!</h1>
+
+        <div class="stats">
+            <div id="modeDisplay" class="mode-summary">Mode: Normal</div>
+            <div id="heartsDisplay" class="hearts">Lives: 3</div>
+            <div id="timerDisplay" class="timer">Time: 01:00</div>
+            <div id="sharkStatus" class="shark-status">Shark is far away</div>
+        </div>
+
+        <div class="hint-box">
+            <h3>Hints Found:</h3>
+            <ul id="hintsList">
+                <p>Use your <strong>Arrow Keys</strong> or wave your <strong>Hand</strong> to find Nemo!</p>
+            </ul>
+        </div>
+
+        <!-- Camera Tracking Feed -->
+        <div id="camera-container">
+            <video id="input_video" style="display:none"></video>
+            <canvas id="output_canvas" width="160" height="120"></canvas>
+            <div class="camera-label">Hand Tracking Active</div>
+        </div>
+
+        <div id="map-container">
+            <img src="world_map.png" alt="Fantasy Ocean Map" id="worldMap">
+            <!-- Marlin Character -->
+            <div id="marlin" class="character" aria-label="Marlin"></div>
+            <!-- Markers will be injected here -->
+        </div>
+
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+            The shark is hungry! Find Nemo before Marlin becomes lunch.
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nemo - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container fade-in">
+        <h1>Find Nemo</h1>
+        <p>Pick a mode and create a game</p>
+
+        <div class="home-panel">
+            <label for="modeSelect"><strong>Game Mode</strong></label>
+            <select id="modeSelect">
+                <option value="easy">Easy</option>
+                <option value="normal" selected></option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="startHiderButton">Start Game</button>
+        </div>
+        <div class="mode-cards">
+            <div class="mode-card">
+                <h3>Easy</h3>
+                <p>90 Seconds</p>
+            </div>
+            <div class="mode-card">
+                <h3>Normal</h3>
+                <p>60 Seconds</p>
+            </div>
+            <div class="mode-card">
+                <h3>Hard</h3>
+                <p>40 Seconds</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
